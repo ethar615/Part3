@@ -1,0 +1,102 @@
+<%- include('./Partials/header'); -%>  
+<%- include('./Partials/main_nav'); -%>  
+
+<div class="container my-5">  <!-- creates a container with margin top and bottom for spacing -->
+    <div class="text-center">  <!-- centers the content inside this div -->
+        <!-- Title -->
+        <h1 class="display-3 homepage-title">Job Satisfaction Surveys</h1>  <!-- main title of the page, with a custom class for styling -->
+        <p class="lead homepage-subtitle">Track and enhance your team's satisfaction and productivity.</p>  <!-- subtitle with a custom class for styling -->
+
+        <!-- Buttons -->
+        <div class="d-flex justify-content-center mt-4">  <!-- flex container for centering buttons and adding margin top -->
+            <a href="/surveyslist" class="btn btn-primary btn-lg homepage-button mx-2">  <!-- link to surveys list page with primary button styling -->
+                <i class="fas fa-eye"></i> View Surveys  <!-- icon and text inside the button -->
+            </a>
+            <a href="/surveyslist/add" class="btn btn-outline-primary btn-lg homepage-button mx-2">  <!-- link to add new survey page with outline button styling -->
+                <i class="fas fa-plus-circle"></i> Start a New Survey  <!-- icon and text inside the button -->
+            </a>
+        </div>
+    </div>
+</div>
+
+<%- include('./Partials/footer'); -%> 
+
+<style>
+    /* General Styling */
+    body {
+        font-family: 'Poppins', sans-serif;  /* sets the font for the page */
+        background: linear-gradient(145deg, #f7f9fc, #e9ebef);  /* sets a background gradient for the body */
+        color: #333;  /* sets text color to a dark grey */
+    }
+
+    /* Title Styling */
+    .homepage-title {
+        color: #2c3e50;  /* sets title text color to a dark blue-grey */
+        font-weight: 700;  /* makes the title bold */
+        text-transform: uppercase;  /* transforms text to uppercase */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);  /* adds a subtle shadow to the title text */
+        margin-bottom: 15px;  /* adds margin below the title */
+        letter-spacing: 2px;  /* increases letter spacing */
+    }
+
+    .homepage-subtitle {
+        color: #555;  /* sets subtitle text color to grey */
+        font-weight: 400;  /* sets subtitle font weight to normal */
+        font-size: 1.25rem;  /* sets font size for the subtitle */
+        margin-bottom: 30px;  /* adds margin below the subtitle */
+    }
+
+    /* Button Styling */
+    .homepage-button {
+        border-radius: 25px;  /* rounds the button corners */
+        padding: 12px 30px;  /* adds padding inside the button */
+        font-size: 1.1rem;  /* sets the font size for the button */
+        font-weight: 600;  /* makes the button text semi-bold */
+        text-transform: uppercase;  /* transforms text to uppercase in the button */
+        transition: all 0.3s ease;  /* adds smooth transition effect for hover states */
+    }
+
+    .homepage-button i {
+        margin-right: 10px;  /* adds space between the icon and the text */
+    }
+
+    /* Primary Button */
+    .btn-primary {
+        background-color: #4a90e2;  /* sets background color for the primary button */
+        border-color: #4a90e2;  /* sets border color for the primary button */
+        color: white;  /* sets text color to white */
+        box-shadow: 0 4px 10px rgba(74, 144, 226, 0.3);  /* adds shadow to the primary button */
+    }
+
+    .btn-primary:hover {
+        background-color: #357ab7;  /* changes background color on hover */
+        border-color: #357ab7;  /* changes border color on hover */
+        box-shadow: 0 6px 15px rgba(53, 122, 183, 0.4);  /* increases shadow intensity on hover */
+        transform: translateY(-3px);  /* slightly lifts the button on hover */
+    }
+
+    /* Outline Button */
+    .btn-outline-primary {
+        border-color: #4a90e2;  /* sets border color for the outline button */
+        color: #4a90e2;  /* sets text color for the outline button */
+        background-color: transparent;  /* makes the background transparent */
+        box-shadow: 0 4px 10px rgba(74, 144, 226, 0.1);  /* adds light shadow to the outline button */
+    }
+
+    .btn-outline-primary:hover {
+        border-color: #357ab7;  /* changes border color on hover */
+        color: #357ab7;  /* changes text color on hover */
+        background-color: #eaf3fc;  /* changes background color on hover */
+        box-shadow: 0 6px 15px rgba(53, 122, 183, 0.2);  /* increases shadow intensity on hover */
+        transform: translateY(-3px);  /* slightly lifts the outline button on hover */
+    }
+
+    /* Background */
+    .container {
+        border-radius: 15px;  /* rounds the container corners */
+        padding: 40px;  /* adds padding inside the container */
+        background: white;  /* sets white background for the container */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);  /* adds a subtle shadow to the container */
+    }
+
+</style>

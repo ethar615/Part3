@@ -1,0 +1,113 @@
+<%- include('../Partials/header'); -%>
+<%- include('../Partials/main_nav'); -%>
+
+<main class="container my-5">
+    <!-- message area -->
+    <% if (message && message.length > 0) { %>
+        <div class="alert alert-danger text-center">
+            <%= message %> <!-- dynamically render the error message -->
+        </div>
+    <% } %>
+    
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+            <h1 class="text-center display-4 mb-3" style="color: #1a73e8;"><%= title %></h1><!-- page title centered with blue text -->
+            <!-- login form -->
+            <form method="post" autocomplete="off" class="shadow-lg p-4 rounded-3 bg-white">
+                <!-- username input -->
+                <fieldset class="form-group">
+                    <label for="username" class="form-label" style="font-weight: bold;">Username</label>
+                    <input type="text" class="form-control" name="username" placeholder="Enter your username"
+                        id="username" required autofocus>
+                </fieldset>
+                
+                <!-- password input -->
+                <fieldset class="form-group">
+                    <label for="password" class="form-label" style="font-weight: bold;">Password</label>
+                    <input type="password" class="form-control" name="password" placeholder="Enter your password"
+                        id="password" required>
+                    <!-- link to register if the user doesn't have an account -->
+                    <div class="mt-2 text-center">
+                        <p>or <a href="/register" class="text-decoration-none" style="color: #007bff;">Register Here</a></p>
+                    </div>
+                </fieldset>
+                
+                <!-- submit and cancel buttons -->
+                <fieldset class="form-group d-flex justify-content-between">
+                    <input type="submit" class="btn btn-success w-48" value="Login">
+                    <a href="/" class="w-48">
+                        <input type="button" class="btn btn-warning w-100" value="Cancel">
+                    </a>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</main>
+
+<%- include('../Partials/footer'); -%>
+
+<style>
+    /* custom styles */
+    body {
+        background-color: #f7f7f7; /* light grey background */
+    }
+
+    /* custom heading for "Please Login" */
+    .custom-login-heading {
+        font-family: 'Roboto', sans-serif; /* custom font */
+        color: #008080; /* teal color */
+        font-weight: bold;
+        letter-spacing: 1px; /* adds spacing between letters */
+    }
+
+    /* login form card styling */
+    form {
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* soft shadow around the form */
+        border-radius: 10px;
+        background-color: #ffffff; /* white background */
+    }
+
+    .alert {
+        font-weight: bold; /* bold the alert message */
+    }
+
+    .form-control {
+        border-radius: 8px; /* rounded corners for inputs */
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* subtle inner shadow */
+    }
+
+    .form-control:focus {
+        border-color: #007bff; /* focus border color */
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* blue focus shadow */
+    }
+
+    .btn {
+        font-weight: bold; /* bold text for buttons */
+        border-radius: 5px; /* rounded button corners */
+        padding: 10px; /* padding inside buttons */
+        transition: all 0.3s ease; /* smooth transition effect for buttons */
+    }
+
+    .btn:hover {
+        transform: scale(1.05); /* slight zoom effect on hover */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* shadow effect on hover */
+    }
+
+    .btn-warning:hover {
+        background-color: #ffcc00; /* change to yellow on hover */
+    }
+
+    .btn-success:hover {
+        background-color: #28a745; /* change to green on hover */
+    }
+
+    /* link styling */
+    a {
+        color: #007bff; /* blue link color */
+        text-decoration: none; /* remove underline from links */
+    }
+
+    a:hover {
+        text-decoration: underline; /* underline links on hover */
+    }
+</style>
