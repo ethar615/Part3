@@ -32,4 +32,4 @@ Navigation Items (or other UI elements) that allow the user to navigate to appro
 To edit or delete the user must be logged in for privacy. Otherwise, if the user is not logged in then they can only view or answer the survey.
 
 5. UI/UX
-The user interface is functional but not super polished yet. The priority is on usability and core functionality.
+The user interface is functional but not super polished yet. The priority is on usability and core functionality. 
